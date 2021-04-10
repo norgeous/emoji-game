@@ -16,3 +16,5 @@ const randomEmoji = ({size}) => ({
   force: { x: .05, y: -.04 },
   torque: .0001,
 });
+
+export default randomEmoji;

@@ -14,4 +14,5 @@ const cartwheeler = ({x,y}) => ({
     if (onFloor) body.torque = 10;
   },
 });
-  
+
+export default cartwheeler;

@@ -1,3 +1,6 @@
+import { useEffect } from 'React';
+import { Engine, Render, Runner, Events, World, Bodies, Body, Vector, Constraint, Detector } from 'Matter';
+
 const useLevelBodies = (matterInstance) => {
   useEffect(() => {
     if (!matterInstance) return null;
@@ -24,3 +27,5 @@ const useLevelBodies = (matterInstance) => {
     World.add(matterInstance.engine.world, [floor, ceiling, wallLeft, wallRight]);
   }, [matterInstance]);
 };
+
+export default useLevelBodies;

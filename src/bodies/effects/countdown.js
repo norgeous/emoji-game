@@ -29,3 +29,5 @@ const countdown = ({size}) => ({
   y: 500,
   restitution: 1,
 });
+
+export default countdown;

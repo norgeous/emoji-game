@@ -1,3 +1,25 @@
+import useEngine from '../hooks/useEngine';
+import useLevelBodies from '../hooks/useLevelBodies';
+import useCollisionParticleEffect from '../hooks/useCollisionParticleEffect';
+import useKeyboard from '../hooks/useKeyboard';
+import useHealthBar from '../hooks/useHealthBar';
+import usePlayer from '../hooks/usePlayer';
+
+import createItem from '../render/renderer';
+
+import fireParticle from '../bodies/effects/fire';
+import countdown from '../bodies/effects/countdown';
+
+import ram from '../bodies/mobs/ram';
+import cartwheeler from '../bodies/mobs/cartwheeler';
+import fencer from '../bodies/mobs/fencer';
+import hammerBro from '../bodies/mobs/hammerBro';
+
+// import player from '../bodies/player/player';
+import randomThrower from '../bodies/player/randomThrower';
+
+import randomEmoji from '../bodies/randomEmoji';
+
 const App = () => {
   const { boxRef, canvasRef, matterInstance } = useEngine();
   useLevelBodies(matterInstance);
@@ -41,3 +63,5 @@ const App = () => {
     </div>
   );
 };
+
+export default App;

@@ -14,3 +14,5 @@ const fireParticle = ({size}) => ({
   y: 500+Math.random()*20,
   lifespan: 60000,
 });
+
+export default fireParticle;

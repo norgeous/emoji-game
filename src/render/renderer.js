@@ -1,24 +1,5 @@
-const createImageFromEmoji = ({emoji, size, hflip}) => {
-  const drawing = document.createElement('canvas');
-  drawing.width = size;
-  drawing.height = size;
-  let ctx = drawing.getContext('2d');
-  ctx.font = `${size}px sans-serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-
-  if (hflip) {
-    ctx.translate(size, 0);
-    ctx.scale(-1, 1);
-  }
-
-  ctx.fillText(emoji, size*.5, size*.60);
-  const data = drawing.toDataURL('image/png');
-
-  // document.querySelector('#debug-emoji').setAttribute('src',data);
-
-  return data;
-};
+import { Engine, Render, Runner, Events, World, Bodies, Body, Vector, Constraint, Detector } from 'Matter';
+import createImageFromEmoji from './createImageFromEmoji.js';
 
 const labelCollisionMap = {
   'floor': {
@@ -112,7 +93,7 @@ const createItem = (matterInstance, {
     // autokill after lifespan finishes
     if (body.lifespan && age > body.lifespan) {
       body.destroy();
-      delete body;
+      // delete body;
       return;
     }
 
@@ -208,3 +189,5 @@ const createItem = (matterInstance, {
 
   return body;
 };
+
+export default createItem;

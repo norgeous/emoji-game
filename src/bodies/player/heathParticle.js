@@ -11,4 +11,5 @@ const heathParticle = ({x,y}) => ({
   y,
   restitution: 1,
 });
-  
+
+export default heathParticle;

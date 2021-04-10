@@ -1,3 +1,5 @@
+import createItem from '../render/renderer';
+
 const hammerBro = ({x,y}) => ({
   label: 'mob',
   textures: [
@@ -54,4 +56,6 @@ const hammerBro = ({x,y}) => ({
     clearInterval(body.hammerRepeater);
   },
 });
+
+export default hammerBro;
   

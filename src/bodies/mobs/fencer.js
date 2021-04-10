@@ -1,3 +1,5 @@
+import { Body } from 'Matter';
+
 const fencer = ({x,y}) => ({
   label: 'mob',
   textures: [
@@ -20,4 +22,5 @@ const fencer = ({x,y}) => ({
     if (onFloor && f) Body.applyForce(body, body.position, { x: .02, y: -.01 });
   },
 });
-  
+
+export default fencer;

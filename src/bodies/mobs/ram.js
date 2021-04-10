@@ -1,3 +1,5 @@
+import { Body } from 'Matter';
+
 const ram = ({...other}) => ({
   label: 'mob',
   textures: [
@@ -14,4 +16,5 @@ const ram = ({...other}) => ({
   },
   ...other,
 });
-  
+
+export default ram;

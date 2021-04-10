@@ -3,47 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>matter</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <span id="fps"></span>
     <div id="root"><div class="loading-screen">🏃</div></div>
     <img id="debug-emoji" />
 
-    <script src="https://unpkg.com/matter-js/build/matter.min.js"></script>
+    <script src="https://unpkg.com/matter-js/build/matter.min.js" crossorigin></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone@7/babel.min.js" crossorigin></script>
-    
-    <script type="text/javascript" src="render/renderer.js"></script>
-    
-    <script type="text/javascript" src="items/player.js"></script>
-    <script type="text/javascript" src="items/countdown.js"></script>
-    <script type="text/javascript" src="items/fire.js"></script>
-    <script type="text/javascript" src="items/collisionParticle.js"></script>
-    <script type="text/javascript" src="items/randomEmoji.js"></script>
-    <script type="text/javascript" src="items/heathParticle.js"></script>
-    <script type="text/javascript" src="items/randomThrower.js"></script>
-    <script type="text/javascript" src="items/fist.js"></script>
-    
-    <script type="text/javascript" src="items/cartwheeler.js"></script>
-    <script type="text/javascript" src="items/fencer.js"></script>
-    <script type="text/javascript" src="items/ram.js"></script>
-    <script type="text/javascript" src="items/hammerBro.js"></script>
 
-    <script type="text/javascript" src="hooks/useEngine.js"></script>
-    <script type="text/javascript" src="hooks/useCollisionParticleEffect.js"></script>
-    <script type="text/javascript" src="hooks/useLevelBodies.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/render/createImageFromEmoji.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/render/renderer.js"></script>
 
-    <script type="text/javascript" src="hooks/usePlayer.js"></script>
-    <script type="text/javascript" src="hooks/useHealthBar.js"></script>
-    <script type="text/javascript" src="hooks/useKeyboard.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/player/heathParticle.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/player/fist.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/player/player.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/player/randomThrower.js"></script>
 
-    <script type="text/babel" data-presets="env,stage-3,react" src="components/App.jsx" crossorigin></script>
-    <script type="text/babel" data-presets="env,stage-3,react">
-      const { useState, useEffect, useRef } = React;
-      const { Engine, Render, Runner, Events, World, Bodies, Body, Vector, Constraint, Detector } = Matter;
-      ReactDOM.render(<App />, document.querySelector('#root'));
-    </script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/effects/collisionParticle.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/effects/countdown.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/effects/fire.js"></script>
+    
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/mobs/ram.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/mobs/cartwheeler.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/mobs/fencer.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/mobs/hammerBro.js"></script>
+
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/bodies/randomEmoji.js"></script>
+
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/useEngine.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/useLevelBodies.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/useCollisionParticleEffect.js"></script>
+    
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/useKeyboard.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/useHealthBar.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/hooks/usePlayer.js"></script>
+    
+    <script type="text/babel" data-presets="env,stage-3,react" data-plugins="transform-modules-umd" src="./src/components/App.jsx"></script>
+    <script type="text/babel" data-presets="env,stage-3,react" data-plugins="transform-modules-umd" src="./src/index.js"></script>
   </body>
 </html>
