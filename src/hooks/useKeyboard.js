@@ -1,3 +1,5 @@
+import { useEffect } from 'React';
+
 const useKeyboard = () => {
   useEffect(() => {
     window.keyboard = {
@@ -28,3 +30,5 @@ const useKeyboard = () => {
     });
   }, []);
 };
+
+export default useKeyboard;

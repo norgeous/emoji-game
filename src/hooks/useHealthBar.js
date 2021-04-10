@@ -1,4 +1,9 @@
+import { useState, useEffect } from 'React';
+import createItem from '../render/renderer';
+import heathParticle from '../bodies/heathParticle';
+
 const pos = {x:30,y:30};
+
 const useHealthBar = (matterInstance) => {
   const [amt, setAmt] = useState(1);
   const plus = () => setAmt(a=>a+1);
@@ -27,3 +32,5 @@ const useHealthBar = (matterInstance) => {
   
   return { amt, plus, minus };
 };
+
+export default useHealthBar;

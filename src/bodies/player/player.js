@@ -1,3 +1,7 @@
+import { Engine, Render, Runner, Events, World, Bodies, Body, Vector, Constraint, Detector } from 'Matter';
+import createItem from '../../render/renderer';
+import fist from './fist';
+
 const playerObject = () => ({
   label: 'player',
   textures: [
@@ -30,12 +34,12 @@ const playerObject = () => ({
       x: body.position.x,
       y: body.position.y,
       onCollide: ({bodyB}) => {
-        if (!['particle','player'].some(l => l === bodyB.label)) {
+        if (!['particle','player','bullet_player'].some(l => l === bodyB.label)) {
           body.onFloor = body.onFloor+1;
         }
       },
       offCollide: ({bodyB}) => {
-        if (!['particle','player'].some(l => l === bodyB.label)) {
+        if (!['particle','player','bullet_player'].some(l => l === bodyB.label)) {
           body.onFloor = body.onFloor-1;
         }
       },
@@ -117,3 +121,5 @@ const playerObject = () => ({
   y: window.innerHeight-500,
   restitution: 0,
 });
+
+export default playerObject;

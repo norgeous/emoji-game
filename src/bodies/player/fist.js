@@ -14,4 +14,5 @@ const fist = ({...other}) => ({
   },
   ...other,
 });
-  
+
+export default fist;

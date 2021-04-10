@@ -25,4 +25,5 @@ const randomThrower = ({...other}) => ({
   },
   ...other,
 });
-  
+
+export default randomThrower;

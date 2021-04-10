@@ -18,3 +18,5 @@ const collisionParticle = ({x,y,size}) => ({
   scaleAwayOverLifespan: true,
   fadeAwayOverLifespan: true,
 });
+
+export default collisionParticle;
